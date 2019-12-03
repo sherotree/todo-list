@@ -1,0 +1,26 @@
+.wrapper {
+  margin: 100px auto;
+  color: #61dafb;
+}
+
+.title {
+  color: #61dafb;
+  font-weight: bolder;
+}
+
+li {
+  text-decoration-style: none;
+}
+
+.item {
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.left {
+  width: 150px;
+}

@@ -42,17 +42,19 @@ export function List() {
   }
 
   return (
-    <div>
+    <div className="wrapper">
       <h1 className="title">TODO LIST</h1>
       <ul>
         {undoList.map((item, index) => {
           return (
-            <li className="undoItem" key={index + '11'}>
-              <div>
+            <li className="undoItem item" key={index + '11'}>
+              <div className="left">
                 <span onClick={() => handleFinish(index)}>√</span>
                 <span>{item}</span>
               </div>
-              <div onClick={() => undoDelete(index)}>×</div>
+              <div className="right" onClick={() => undoDelete(index)}>
+                ×
+              </div>
             </li>
           )
         })}
@@ -60,12 +62,14 @@ export function List() {
       <ul>
         {doneList.map((item, index) => {
           return (
-            <li className="doneItem" key={index + '22'}>
-              <div>
+            <li className="doneItem item" key={index + '22'}>
+              <div className="left">
                 <span onClick={() => handleCancel(index)}>√</span>
                 <span>{item}</span>
               </div>
-              <div onClick={() => doneDelete(index)}>×</div>
+              <div className="right" onClick={() => doneDelete(index)}>
+                ×
+              </div>
             </li>
           )
         })}
