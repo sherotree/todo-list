@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './List.css'
-import { list } from 'postcss'
+
+// 如何使用回车键也能添加
 
 export function List() {
   const [text, setText] = useState('')
@@ -67,7 +68,7 @@ export function List() {
           return (
             <li className="doneItem item" key={index + '22'}>
               <div className="left">
-                <div className="tick" onClick={() => handleFinish(index)}>
+                <div className="tick" onClick={() => handleCancel(index)}>
                   ✓
                 </div>
                 <div className="content">{item}</div>
