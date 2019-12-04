@@ -66,15 +66,17 @@ button {
   line-height: 30px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+
   font-size: 20px;
 }
 
 input {
   width: 200px;
+  border: 1px solid #ccc;
 }
 button {
   width: 50px;
+  box-shadow: 0 0 2px 2px rgb(104, 104, 243);
 }
 
 .doneItem > .left {
