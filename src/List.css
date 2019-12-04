@@ -4,8 +4,13 @@
 }
 
 .title {
-  color: #61dafb;
   font-weight: bolder;
+  font-size: 50px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -15,12 +20,67 @@ li {
 .item {
   margin: 30px auto;
   display: flex;
-  justify-content: space-around;
-  width: 200px;
-  font-size: 30px;
-  font-weight: bold;
+  justify-content: space-between;
+  width: 400px;
+  font-size: 24px;
+  font-weight: bolder;
+  background: white;
+  padding-left: 10px;
+  margin-bottom: -28px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.item:hover {
+  background: #f5f5f5;
 }
 
 .left {
-  width: 150px;
+  display: flex;
+}
+
+.tick {
+  margin: 10px 10px;
+}
+
+.content {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.delete {
+  color: #ccc;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.inputBox {
+  margin-top: 50px;
+  font-size: 24px;
+}
+
+input,
+button {
+  line-height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+}
+
+input {
+  width: 200px;
+}
+button {
+  width: 50px;
+}
+
+.doneItem > .left {
+  color: red;
+}
+
+.doneItem .content {
+  text-decoration-line: line-through;
 }

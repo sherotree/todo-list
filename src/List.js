@@ -49,10 +49,13 @@ export function List() {
           return (
             <li className="undoItem item" key={index + '11'}>
               <div className="left">
-                <span onClick={() => handleFinish(index)}>√</span>
-                <span>{item}</span>
+                <div className="tick" onClick={() => handleFinish(index)}>
+                  ✓
+                </div>
+                <div className="content">{item}</div>
               </div>
-              <div className="right" onClick={() => undoDelete(index)}>
+
+              <div className="delete" onClick={() => undoDelete(index)}>
                 ×
               </div>
             </li>
@@ -64,22 +67,27 @@ export function List() {
           return (
             <li className="doneItem item" key={index + '22'}>
               <div className="left">
-                <span onClick={() => handleCancel(index)}>√</span>
-                <span>{item}</span>
+                <div className="tick" onClick={() => handleFinish(index)}>
+                  ✓
+                </div>
+                <div className="content">{item}</div>
               </div>
-              <div className="right" onClick={() => doneDelete(index)}>
+
+              <div className="delete" onClick={() => doneDelete(index)}>
                 ×
               </div>
             </li>
           )
         })}
       </ul>
-      <input
-        placeholder="add a new todo..."
-        onChange={handleChange}
-        value={text}
-      />
-      <button onClick={addList}>ADD</button>
+      <div className="inputBox">
+        <input
+          placeholder="add a new todo..."
+          onChange={handleChange}
+          value={text}
+        />
+        <button onClick={addList}>ADD</button>
+      </div>
     </div>
   )
 }
